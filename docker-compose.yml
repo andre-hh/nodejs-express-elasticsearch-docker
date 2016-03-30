@@ -1,0 +1,12 @@
+server:
+  build: ./server
+  command: sh /home/app/start.sh
+  ports:
+    - '5000:5000'
+  volumes:
+    - /Users/andre/IdeaProjects/nodejs-express-elasticsearch-docker/server:/home/app
+  links:
+    - elasticsearch
+
+elasticsearch:
+  image: elasticsearch
