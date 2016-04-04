@@ -1,3 +1,10 @@
+client:
+  image: nginx
+  ports:
+    - '8080:80'
+  volumes:
+    - /Users/andre/IdeaProjects/nodejs-express-elasticsearch-docker/client/static-content:/usr/share/nginx/html
+
 server:
   build: ./server
   command: sh /home/app/start.sh
